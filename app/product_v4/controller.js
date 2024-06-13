@@ -54,7 +54,7 @@ const update = (req, res) => {
 
   Product.updateOne({ _id: id }, updateData)
     .then((result) => res.send(result))
-    .catch((error) => res.status(500).send(error));
+    .catch((error) => res.send(error));
 };
 
 const destroy = (req, res) => {
